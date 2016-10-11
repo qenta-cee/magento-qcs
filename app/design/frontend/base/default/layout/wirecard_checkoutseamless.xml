@@ -90,7 +90,7 @@
     <wirecard_checkoutseamless_processing_storereturn>
         <reference name="root">
             <action method="setTemplate">
-                <template>wirecard_checkoutseamless/seamless/storereturn.phtml</template>
+                <template>wirecard/checkoutseamless/seamless/storereturn.phtml</template>
             </action>
         </reference>
     </wirecard_checkoutseamless_processing_storereturn>
