@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Shop System Plugins - Terms of Use
+ *
+ * The plugins offered are provided free of charge by Qenta Payment CEE GmbH
+ * (abbreviated to Qenta CEE) and are explicitly not part of the Qenta CEE range of
+ * products and services.
+ *
+ * They have been tested and approved for full functionality in the standard configuration
+ * (status on delivery) of the corresponding shop system. They are under General Public
+ * License Version 2 (GPLv2) and can be used, developed and passed on to third parties under
+ * the same terms.
+ *
+ * However, Qenta CEE does not provide any guarantee or accept any liability for any errors
+ * occurring when used in an enhanced, customized shop system configuration.
+ *
+ * Operation in an enhanced, customized configuration is at your own risk and requires a
+ * comprehensive test phase by the user of the plugin.
+ *
+ * Customers use the plugins at their own risk. Qenta CEE does not guarantee their full
+ * functionality neither does Qenta CEE assume liability for any disadvantages related to
+ * the use of the plugins. Additionally, Qenta CEE does not guarantee the full functionality
+ * for customized shop systems or installed plugins of other vendors of plugins within the same
+ * shop system.
+ *
+ * Customers are responsible for testing the plugin's functionality before starting productive
+ * operation.
+ *
+ * By installing the plugin into the shop system the customer agrees to these terms of use.
+ * Please do not use the plugin if you do not agree to these terms of use!
+ */
+-->
+
+<layout version="0.1.0">
+    <!--
+    QentaCheckoutPage Failure Response Review
+    -->
+    <qenta_checkoutseamless_processing_failure>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-right.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="qenta_checkoutseamless/failure" name="qenta_checkoutseamless_failure"
+                   template="qenta/checkoutseamless/failure.phtml">
+            </block>
+        </reference>
+    </qenta_checkoutseamless_processing_failure>
+
+    <qenta_checkoutseamless_processing_checkout>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="qenta_checkoutseamless/checkout"
+                   name="qenta_checkoutseamless_checkout"
+                   template="qenta/checkoutseamless/checkout.phtml">
+            </block>
+        </reference>
+    </qenta_checkoutseamless_processing_checkout>
+
+    <qenta_checkoutseamless_processing_redirect>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>qenta/checkoutseamless/blank.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="qenta_checkoutseamless/processing" name="qenta_checkoutseamless_processing"
+                   template="qenta/checkoutseamless/processing.phtml"/>
+        </reference>
+    </qenta_checkoutseamless_processing_redirect>
+
+    <qenta_checkoutseamless_processing_return>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>qenta/checkoutseamless/blank.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="qenta_checkoutseamless/return" name="qenta_checkoutseamless_return"
+                   template="qenta/checkoutseamless/return.phtml"/>
+        </reference>
+    </qenta_checkoutseamless_processing_return>
+
+    <qenta_checkoutseamless_processing_storereturn>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>qenta/checkoutseamless/seamless/storereturn.phtml</template>
+            </action>
+        </reference>
+    </qenta_checkoutseamless_processing_storereturn>
+
+    <checkout_onepage_index>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/qenta/checkoutseamless/stylesheet.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="qenta_checkoutseamless/seamless_script" name="qenta_checkoutseamless_page_js"
+                   template="qenta/checkoutseamless/seamless/script.phtml"/>
+        </reference>
+    </checkout_onepage_index>
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type>
+                <name>prototype/window.js</name>
+            </action>
+            <action method="addItem">
+                <type>js_css</type>
+                <name>prototype/windows/themes/default.css</name>
+            </action>
+            <action method="addCss">
+                <name>lib/prototype/windows/themes/magento.css</name>
+            </action>
+        </reference>
+    </default>
+</layout>

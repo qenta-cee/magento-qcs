@@ -1,0 +1,35 @@
+#qenta-checkoutseamless-iframe-div
+{
+    background: white;
+    border: 1px solid #CCC;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    margin: -250px 0 0 -250px;
+    width: 420px;
+    text-align: left;
+    -moz-box-shadow: 0 0 6px #ccc;
+    -webkit-box-shadow: 0 0 6px #ccc;
+    -box-shadow: 0 0 6px #ccc;
+    z-index: 1000;
+}
+
+#qenta-checkoutseamless-iframe
+{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#qenta-checkoutseamless-iframe-div-head h3
+{
+    background: #D9E5EE;
+    border-bottom: 1px solid #CCC;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+#qenta-checkoutseamless-iframe-div-body
+{
+    height: 500px;
+}

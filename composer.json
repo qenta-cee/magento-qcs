@@ -1,16 +1,16 @@
 {
-    "name": "wirecard/magento-wcs",
+    "name": "qenta/magento-wcs",
     "license": "GPL-2.0-only",
     "type": "magento-module",
-    "description": "Wirecard Checkout Seamless extension for Magento",
-    "keywords": ["wirecard", "checkout", "seamless", "payment", "pci-dss", "saq-a", "saq-a-ep", "magento"],
-    "homepage": "https://www.wirecard.at",
+    "description": "Qenta Checkout Seamless extension for Magento",
+    "keywords": ["qenta", "checkout", "seamless", "payment", "pci-dss", "saq-a", "saq-a-ep", "magento"],
+    "homepage": "https://www.qenta.com",
     "support": {
-        "email": "support.at@wirecard.com",
-        "docs": "https://guides.wirecard.com"
+        "email": "support@qenta.com",
+        "docs": "https://guides.qenta.com"
     },
     "require": {
-        "php": ">=5.3",
+        "php": ">=7.3",
         "magento-hackathon/magento-composer-installer": "*"
     }
 }
